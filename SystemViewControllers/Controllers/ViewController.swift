@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
     
@@ -39,10 +40,25 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBAction func shareButtonTapped(_ sender: Any) {
+    @IBAction func shareButtonTapped(_ sender: UIButton) {
+        // Unwrap the imageView's image
+        guard let image = imageView.image else { return }
+        // Create instance of UIActivityViewController
+        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        // Place popover over button that triggered the presentation(for iPads)
+        activityController.popoverPresentationController?.sourceView = sender
+        // Present activityController to user
+        present(activityController, animated: true, completion: nil)
     }
     
-    @IBAction func safariButtonTapped(_ sender: Any) {
+    @IBAction func safariButtonTapped(_ sender: UIButton) {
+        // Create URL from string
+        if let url = URL(string: "http://www.apple.com") {
+            // Create instance of SFSafariViewController
+            let safariViewController = SFSafariViewController(url: url)
+            // Present safariViewController to user
+            present(safariViewController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func cameraButtonTapped(_ sender: Any) {

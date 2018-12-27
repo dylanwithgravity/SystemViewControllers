@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zop-t7-6vb">
                                 <rect key="frame" x="38" y="40" width="299" height="330"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YUF-r3-fzc">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fjords" translatesAutoresizingMaskIntoConstraints="NO" id="YUF-r3-fzc">
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="285"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="285" id="1Se-9e-b6N"/>
@@ -90,4 +90,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fjords" width="600" height="400"/>
+    </resources>
 </document>
